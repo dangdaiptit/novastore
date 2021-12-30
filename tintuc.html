@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Nhúng phông Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!--Link file css-->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!--Logo website-->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/logo/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/logo/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/logo/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/logo/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/logo/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/logo/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/logo/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/logo/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/logo/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/logo/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/logo/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>NOVA-STORE</title>
+    <style type="text/css">
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            font-size: 15px;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        .big-block {
+            height: auto;
+            display: inline-block;
+        }
+        
+        .block-child1 {
+            height: 216px;
+            background: #e0e0d1;
+            margin: 0;
+        }
+        
+        .block-child2 {
+            height: 1000px;
+            width: 100%;
+            background: #e0e0d1;
+            margin: 0;
+        }
+        
+        .block-child3 {
+            height: 500px;
+            background: #e0e0d1;
+            margin: 0;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        
+        .link {
+            color: #1a1a1a;
+        }
+        
+        .link:hover {
+            color: #3385ff;
+        }
+        
+        .diff {
+            margin-top: 5px;
+            height: 500px;
+        }
+        /* .title1 {} */
+        
+        .title3 {
+            color: #e6e6e6;
+            padding: 0px 10px;
+            background: red;
+            float: left;
+            font-size: 25px;
+        }
+        
+        .tag-a {
+            color: #1a1a1a;
+        }
+        
+        .tag-a:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box-header-logo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="index.html"><img style="height: auto;width: auto;" src="assets/img/logo.png" alt=""></a>
+                </div>
+
+                <div class="col-md-5 box-search">
+                    <div class="box-input d-flex">
+                        <div class="input-group-search">
+                            <input type="text" name="search" placeholder="Tìm kiếm..." class="index_input_search">
+                        </div>
+                        <div class="group-collection-search">
+                            <div class="dropdown">
+                                <button type="button" class="btn dropdown-toggle btn__group-collection-search" data-toggle="dropdown">
+                                          Tất...
+                                        </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Tất cả</a>
+                                    <a class="dropdown-item" href="dien-thoai.html">Điện thoại</a>
+                                    <a class="dropdown-item" href="tablet.html">Tablet</a>
+                                    <a class="dropdown-item" href="man-hinh-may-tinh.html">Màn hình & PC</a>
+                                    <a class="dropdown-item" href="laptop.html">Laptop</a>
+                                    <a class="dropdown-item" href="tai-nghe.html">Tai nghe</a>
+                                    <a class="dropdown-item" href="#">Phụ kiện</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="icon-search btn">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                    </div>
+                </div>
+
+                <div class="col-md-4 d-flex box-user-right">
+                    <div class="order-tracking">
+                        <a href="">
+                            <i class="far fa-edit"><span class="ml-1">Kiểm tra đơn hàng</span></i>
+                        </a>
+                    </div>
+
+                    <div class="user_login">
+                        <div class="dropdown">
+                            <button type="button" class="btn dropdown-toggle btn__user_login" data-toggle="dropdown">
+                                    <span>Tài khoản</span>
+                                </button>
+                            <div class="dropdown-menu item__user-login">
+                                <a class="dropdown-item" href="#"><i class="fas fa-user-circle"></i><span class="text__user-login">Đăng nhập</span></a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-plus"></i><span class="text__user-login">Đăng ký</span></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="cart_header">
+                        <a href="">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-menu">
+        <div class="container box-nav ">
+            <nav class="navbar navbar-expand-lg navbar-menu">
+                <ul class="nav nav-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">SẢN PHẨM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tintuc.html">TIN TỨC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gioithieu.html">GIỚI THIỆU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lienhe.html">LIÊN HỆ</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!--MAIN-->
+    <div class="box-title-product mb-4 sticky-top" style="z-index: 1;">
+        <div class="container">
+            <div class="box__title-main d-flex ">
+                <i class="fas fa-home icon-home"></i>
+                <a href="index.html">
+                    <p class="text__title-main">Trang chủ</p>
+                </a>
+                <i class="fas fa-chevron-right icon-right"></i>
+                <a href="laptop.html">
+                    <p class="text__title-main">Tin tức</p>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Slide Mutil-->
+    <div class="container" style="margin-top: 20px;">
+        <div class="row blocks">
+            <div class="col-sm-3 big-block">
+                <div class="block-child1">
+                    <div style="margin: 20px 0 5px 20px; display: inline-block;">
+                        <a href="#"><strong>XU HƯỚNG</strong></a>
+
+                    </div>
+
+                    <hr style="margin: 0px 20px;width: 50%;">
+                    <div style="margin: 20px 0 5px 20px; display: inline-block;">
+                        <a href="#"><strong>MẸO VẶT</strong></a>
+                    </div>
+                    <hr style="margin: 0px 20px;width: 50%;">
+                    <div style="margin: 20px 0 5px 20px; display: inline-block;">
+                        <a href="#"><strong>SĂN SALE CUỐI NĂM</strong></a>
+                    </div>
+                    <hr style="margin: 0px 20px; width: 50%;">
+                    <div style="margin: 20px 0 5px 20px; display: inline-block;">
+                        <a href="#"><strong>QUAN TÂM NHIỀU</strong></a>
+                    </div>
+                    <hr style="margin: 0px 20px;width: 50%;">
+
+                </div>
+                <div class="diff">
+                    <strong style="margin-left: 20px;font-size: 18px;">Bài viết sản phẩm mới</strong>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <p></p>
+                            <img src="assets/img/tin-tuc/2.png" style="width: 100px;">
+                        </div>
+                        <div class="col-md-7" style="margin-top:10px"><a href="#">Bất ngờ về độ phân giải màn hình Xiaomi node 9</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <p></p>
+                            <img src="assets/img/tin-tuc/6.png" style="width: 100px;">
+                        </div>
+                        <div class="col-md-7" style="margin-top:10px"><a href="#">So sánh Galaxy S21 FE và Galaxy S20 FE</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <p></p>
+                            <img src="assets/img/tin-tuc/7.png" style="width: 100px;">
+                        </div>
+                        <div class="col-md-7" style="margin-top:10px"><a href="#">Điện thoại màn hình gập của samsung có gì mới?</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <p></p>
+                            <img src="assets/img/tin-tuc/8.png" style="width: 100px;">
+                        </div>
+                        <div class="col-md-7" style="margin-top:10px"><a href="#">Vivo sắp ra mát sản phẩm mới</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <p></p>
+                            <img src="assets/img/tin-tuc/1.png" style="width: 100px;">
+                        </div>
+                        <div class="col-md-7 title1" style="margin-top:10px"><a href="#">Sự tối ưu hóa ấn tượng của Iphone X</a></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4 big-block">
+                <div class="block-child2">
+                    <!-- <img src="assets/img/tin-tuc/cover1.jpg" style="width: 350px;height: auto;"> -->
+                    <iframe width="350" height="200" src="https://www.youtube.com/embed/q0wTJnO3NxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a href="#" class="link"><strong>Người chơi hệ 'Táo' khi mua MacBook cần lưu ý gì? Tất cả những điều cần biết trước khi mua MacBook để có lựa chọn phù hợp</strong></a>
+                    <br>
+                    <p>&emsp;MacBook là một trong những dòng sản phẩm tạo nên tên tuổi cho Apple. Đi đôi với hiệu năng cao, thiết kế bắt mắt, là sự sang trọng và gọn nhẹ. Nhiều bạn trước khi mua MacBook sẽ tự đặt ra cho mình nhiều câu hỏi như nên mua MacBook
+                        nào? Mua MacBook cần lưu ý gì? Bài viết này mình sẽ gửi đến các bạn những điều cần biết trước khi mua MacBook, hy vọng sẽ giúp các bạn trả lời được các câu hỏi này.</p>
+                    <p style="height:10px; background:white;"></p>
+                    <!-- <img src="assets/img/tin-tuc/vinfast.jpg" style="width: 350px;height: auto;"> -->
+                    <iframe width="350" height="200" src="https://www.youtube.com/embed/z7kRw1s9ejI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <a href="#" class="link"><strong>Hiệu năng iPhone 13 Pro Max thổi bay mọi điện thoại Android với Apple A15 Bionic</strong></a>
+
+                    <p>&emsp;Có thể nói iPhone 13 Pro Max là chiếc điện thoại hiếm hoi nhận được đánh giá 5 sao từ Toms Guide. Thiết bị có được khả năng chụp ảnh và quay video vượt trội - bao gồm cả chế độ Cinematic rất hấp dẫn và chế độ chụp ảnh macro.
+                        Không chỉ vậy mà iPhone 13 Pro Max còn có hiệu suất đỉnh cao cùng màn hình 120 Hz cho trải nghiệm mượt mà. Thêm vào đó, thời lượng pin siêu khủng cũng là một trong những điểm mạnh nhất của iPhone thế hệ mới.</p>
+                </div>
+
+
+            </div>
+            <div class="col-sm-5 big-block">
+                <div class="block-child3">
+                    <div style="margin:10px; display: inline-block;">
+                        <strong>THẢO LUẬN NHIỀU</strong>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-2"><strong class="title3">1</strong>
+                        </div>
+                        <div class="col-md-10" style="margin-top:-5px"><a href="#" class="tag-a">Những lưu ý khi chọn mua laptop cho dân làm đồ hoạ và kĩ thuật, 3 gợi ý với mức giá dễ tiếp cận dành cho hội đam mê thiết kế</a></div>
+                    </div>
+                    <hr style="width: 50%;">
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-2"><strong class="title3">2</strong>
+                        </div>
+                        <div class="col-md-10" style="margin-top:-5px"><a href="#" class="tag-a">So sánh Android 12 và Android 11: Đâu là những cải tiến và có nên cập nhật lên Android 12 không khi Android 11 vẫn tốt?</a></div>
+                    </div>
+                    <hr style="width: 50%;">
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-2"><strong class="title3">3</strong>
+                        </div>
+                        <div class="col-md-10" style="margin-top:-5px"><a href="#" class="tag-a">MIUI 13 có gì mà HOT quá vậy, điện thoại nào được cập nhật - Có nên nâng cấp lên MIUI 13 không khi ngày ra mắt đã cận kề?</a></div>
+                    </div>
+                    <hr style="width: 50%;">
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-2"><strong class="title3">4</strong>
+                        </div>
+                        <div class="col-md-10" style="margin-top:-5px"><a href="#" class="tag-a">SamFan nên mua gì từ chương trình khuyến mãi cuối năm? Gợi ý cho bạn loạt sản phẩm công nghệ cực HOT đang chờ bạn chốt đơn!</a></div>
+                    </div>
+                    <hr style="width: 50%;">
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-2"><strong class="title3">5</strong>
+                        </div>
+                        <div class="col-md-10" style="margin-top:-5px"><a href="#" class="tag-a">Chiếc hộp đựng Xiaomi 12 đặc biệt cho việc chống rò rỉ trước ngày ra mắt, pha xử lý cao tay đến từ vị trí của CEO Xiaomi</a></div>
+                    </div>
+                    <div>
+                        <p></p>
+                        <img src="assets/img/tin-tuc/cover2.gif" style="width: 445px;">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end main-->
+
+    <!--FOOTER-->
+    <div id="footer " class="mt-5 footer ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-3 mt-3 ">
+                    <p class="title-footer ">
+                        <strong>Tìm cửa hàng</strong>
+                    </p>
+                    <p class="text-footer ">Tìm cửa hàng gần nhất</p>
+                    <p class="text-footer ">Mua hàng từ xa</p>
+                    <p class="title-footer ">
+                        <strong>Phương thức thanh toán</strong>
+                    </p>
+                    <ul class="box-logo-banking d-flex flex-wrap ">
+                        <li class="item-logo-banking mt-2 pl-0 pr-2 ">
+                            <a href=" ">
+                                <img src="assets/img/logo-thanh-toan-online/visa.png" alt=" ">
+                            </a>
+                        </li>
+                        <li class="item-logo-banking mt-2 pl-0 pr-2 ">
+                            <a href=" ">
+                                <img src="assets/img/logo-thanh-toan-online/atm.png " alt=" ">
+                            </a>
+                        </li>
+                        <li class="item-logo-banking mt-2 pl-0 pr-2 ">
+                            <a href=" ">
+                                <img src="assets/img/logo-thanh-toan-online/masterCard.png " alt=" ">
+                            </a>
+                        </li>
+                        <li class="item-logo-banking mt-2 pl-0 pr-2 ">
+                            <a href=" ">
+                                <img src="assets/img/logo-thanh-toan-online/zalopay.png " alt=" ">
+                            </a>
+                        </li>
+
+                        <li class="item-logo-banking mt-2 pl-0 pr-2 ">
+                            <a href=" ">
+                                <img src="assets/img/logo-thanh-toan-online/momo.png " alt=" ">
+                            </a>
+                        </li>
+                        <li class="item-logo-banking mt-2 pl-0 pr-2 ">
+                            <a href=" ">
+                                <img src="assets/img/logo-thanh-toan-online/vnpay.png " alt=" ">
+                            </a>
+                        </li>
+                        <li class="item-logo-banking mt-2 pl-0 pr-2 ">
+                            <a href=" ">
+                                <img src="assets/img/logo-thanh-toan-online/mpos.png " alt=" ">
+                            </a>
+                        </li>
+                        <li class="item-logo-banking mt-2 pl-0 pr-2 ">
+                            <a href=" ">
+                                <img src="assets/img/logo-thanh-toan-online/vietcombank.png " alt=" ">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mt-3 ">
+                    <p class="text-footer ">Gọi mua hàng: <b>1800.2097</b> (8h00 - 22h00)</p>
+                    <p class="text-footer ">Gọi khiếu nại: <b>1800.2063</b> (8h00 - 21h30)</p>
+                    <p class="text-footer ">Gọi bảo hành: <b>1800.2064</b> (8h00 - 21h00)</p>
+                    <p class="title-footer ">
+                        <strong>
+                            Đối tác dịch vụ bảo hành
+                        </strong>
+                    </p>
+                    <p class="text-footer ">Điện Thoại - Máy tính</p>
+                </div>
+                <div class="col-md-3 mt-3 ">
+                    <p class="text-footer ">Mua hàng và thanh toán Online</p>
+                    <p class="text-footer ">Mua hàng trả góp Online</p>
+                    <p class="text-footer ">Tra cứu thông tin đơn hàng</p>
+                    <p class="text-footer ">Tra cứu thông tin bảo hành</p>
+                    <p class="text-footer ">Tra cứu hóa đơn điện tử</p>
+                    <p class="text-footer ">Trung tâm bảo hành chính hãng</p>
+                    <p class="text-footer ">Dịch vụ bảo hành điện thoại</p>
+                </div>
+                <div class="col-md-3 mt-3 ">
+                    <div class="title ">
+                        <span>Công ty TNHH Thương Mại & Dịch vụ NOVA Telephone</span>
+                    </div>
+                    <p class="text-mail ">Bạn muốn nhận tư vấn từ chúng tôi?</p>
+                    <p class="text-mail ">Đăng ký ngay bây giờ!</p>
+                    <div class="box-mail d-flex justify-content-between ">
+                        <input type="text " class="form-control input-mail " placeholder="Nhập email của bạn ">
+                        <i class="fas fa-paper-plane "></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="name-group ">
+            <div class="container box__text__name-group ">
+                <p class="text__name-group ">
+                    Nhóm 11: Thiết kế hệ thống Website TMDT
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js "></script>
+</body>
+
+</html>

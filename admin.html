@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>SB Admin - Dashboard</title>
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <link rel="stylesheet" type="text/css" href="assets/css/sb-admin.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+</head>
+
+<body id="page-top">
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+        <a class="navbar-brand mr-1" href="#">SB Admin - Dashboard</a>
+        <button class="btn btn-sm text-white" href="#">
+      <i class="fas fa-bars"></i>
+    </button>
+
+        <!-- Navbar Search -->
+        <form class=" ml-auto">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for..." aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+            <i class="fas fa-search"></i>
+          </button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Navbar -->
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown no-arrow ">
+                <a class="nav-link dropdown-toggle" href="#" role="button">
+                    <i class="fas fa-bell fa-fw"></i>
+                    <span class="badge badge-danger">9+</span>
+                </a>
+
+            </li>
+            <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link dropdown-toggle" href="#" role="button">
+                    <i class="fas fa-envelope fa-fw"></i>
+                    <span class="badge badge-danger">7</span>
+                </a>
+            </li>
+            <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" role="button">
+                    <i class="fas fa-user-circle fa-fw"></i>
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="sidebar navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-home"></i>
+                    <span>Product</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pages</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tables</span></a>
+            </li>
+        </ul>
+
+
+        <div id="content-wrapper">
+            <div class="container-fluid">
+                <h1 style="text-align: center;">Quản lý sản phẩm</h1>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Tên Sản Phẩm</th>
+                            <th scope="col">Giá</th>
+                            <th scope="col">Trạng thái</th>
+                            <th scope="col">Khác</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="load-table">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>iphone</td>
+                            <td>1000.000 VND</td>
+                            <td>Còn hàng</td>
+                            <td>Hà Nội</td>
+
+                            <td><button onclick="bindingInfo(this)" type="button" class="btn btn-primary" product-id="${element.id}">LOAD</button>
+                                <button onclick="deleteProduct(this)" id="btnDelete" type="button" class="btn btn-danger" product-id="${element.id}">DELETE</button></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                <form action="/" method="POST" id="form-updata-info">
+                    <div class="mb-3">
+                        <label for="exampleInputID" class="form-label">Id</label>
+                        <input type="number" id="id" class="form-control" name="id">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Tên sản phẩm</label>
+                        <input type="text" id="name" class="form-control" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Giá</label>
+                        <input type="text" id="cost" class="form-control" name="cost">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Trạng Thái</label>
+                        <input type="text" id="status" class="form-control" name="status">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputDif" class="form-label">Khác</label>
+                        <input type="text" id="dif" class="form-control" name="dif">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputDif" class="form-label">Avatar</label>
+                        <input type="file" id="avatar" class="form-control-file" name="avatar">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="btnCreate">Thêm</button>
+                    <button type="submit" class="btn btn-primary" id="btnUpdate">Sửa</button>
+                </form>
+            </div>
+
+            <!-- footer -->
+            <div>
+                <footer class="sticky-footer">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright © Your Website 2021</span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- footer -->
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+        <script>
+            function loadData() {
+                $.get("/api/all-product").done(res => {
+                    let table = '';
+
+                    res.forEach(element => {
+                        console.log(element);
+                        let html = `<tr>
+                <th scope="row">${element.id}</th>
+                <td>${element.name}</td>
+                <td>${element.cost} VNĐ</td>
+                <td>${element.status}</td>
+                <td>${element.dif}</td>
+
+                <td><button onclick="bindingInfo(this)"  type="button" class="btn btn-primary" product-id="${element.id}">LOAD</button>
+                <button onclick="deleteProduct(this)" id="btnDelete" type="button" class="btn btn-danger" product-id="${element.id}">DELETE</button></td>
+              </tr>`
+                        table += html;
+                    });
+                    $('#load-table').html(table);
+                });
+            }
+
+            function updateProduct() {
+                let form = document.getElementById("form-updata-info");
+                let data = new FormData(form);
+                $.ajax({
+                    type: 'put',
+                    url: `/api/update-product`,
+                    data: data,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: res => {
+                        alert("Sửa thành công!");
+                        loadData();
+                    }
+                });
+            }
+
+            function createProduct() {
+                let form = document.getElementById("form-updata-info");
+                let data = new FormData(form);
+                $.ajax({
+                    type: 'post',
+                    url: `/api/create-product`,
+                    data: data,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: res => {
+                        alert("Thêm thành công!");
+                        loadData();
+                    }
+                });
+            }
+
+            function deleteProduct(element) {
+                let id = $(element).attr("product-id");
+                $.ajax({
+                    method: 'delete',
+                    url: '/api/delete-product',
+                    contentType: 'application/json',
+                    data: JSON.stringify(id),
+                    success: res => {
+                        alert("Xóa thành công!");
+                        loadData();
+                    }
+                });
+            }
+
+
+            function bindingInfo(element) {
+                let id = $(element).attr("product-id");
+                $.get("/api/get-product-by-id?id=" + id).done(res => {
+                    $('#id').val(res.id);
+                    $('#cost').val(res.cost);
+                    $('#name').val(res.name);
+                    $('#status').val(res.status);
+                    $('#dif').val(res.dif);
+
+                });
+            }
+
+
+
+            $(function() {
+                console.log($('#name').val());
+            });
+
+            $(function() {
+                loadData();
+            });
+
+            $('#btnCreate').click((event) => {
+                event.preventDefault();
+                createProduct();
+            })
+
+            $('#btnUpdate').click((event) => {
+                event.preventDefault();
+                updateProduct();
+            })
+        </script>
+</body>
+
+</html>
